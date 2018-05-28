@@ -13,15 +13,17 @@ def fib(n):
 
 #q1b
 counter=0
+breaks=False
 n=0
 exit=0
-while True:
+while not breaks:
    exit=fib(n)
    if exit >=2000:
-       break
-   print(fib(n),end=" ")
-   n+=1
-   counter+=1
+       breaks=True
+   if exit<=2000:
+       print(fib(n),end=" ")
+       n+=1
+       counter+=1
 
 print("There were {} terms".format(counter))
 
